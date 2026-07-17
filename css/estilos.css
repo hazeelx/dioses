@@ -1,0 +1,112 @@
+body
+{
+    background-image: url(../imgs/rayos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Syne Mono", monospace !important;
+    text-align: center !important;
+}
+
+h1, h2
+{
+    color: white !important;
+    text-align: center;
+}
+
+/*BOTON*/
+#btnAleatorio
+{
+    display: flex;
+    color: black;
+    margin: auto;
+    justify-content: center;
+    font-size: 20px;
+    background: white;
+    border-radius: 10px;
+    font-family: "Syne Mono", monospace;
+    text-align: left !important;
+}
+
+/*POP UP*/
+#popup
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: white;
+    background: rgba(0, 0, 0, 0.258);
+}
+
+.btn-close
+{
+    filter: invert(1);
+}
+
+.popup-dioses
+{
+    background-color: rgba(0, 0, 0, 0.457);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 6px 20px 10px black;
+}
+
+#popup.mostrar
+{
+    opacity: 1;
+    transform: translateY(0);
+}         
+
+.oculto
+{
+    display: none !important;      
+}
+
+/*RESOLUCIONES*/
+@media (max-width: 600px) 
+{
+    #popup
+    {
+        padding: 40px 0;
+        align-items: flex-start;
+    }
+
+    .popup-dioses 
+    {
+        width: 90%;
+        max-width: 300px;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 100px;
+        
+    }
+
+    #imagenDios
+    {
+        width: 100%;
+        max-width: 270px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    h2.popup-titulo 
+    {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    #textoDios
+    {
+        font-size: .9rem;
+    }
+
+}
