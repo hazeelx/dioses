@@ -1,7 +1,7 @@
 const dioses = 
 [
     // ===== MITOLOGÍA GRIEGA =====
-    {nombre: "Zeus", region: ["gr"], historia: "Tras liberar a sus hermanos del estómago de Cronos, lideró la guerra contra los titanes y estableció el reinado del Olimpo. Gobernó el cielo, impartió justicia y mantuvo el equilibrio entre dioses y mortales, aunque sus romances trajeron incontables conflictos divinos."},
+    {nombre: "Zeus", region: ["gr"], historia: "Tras iberar a sus hermanos del estómago de Cronos, lideró la guerra contra los titanes y estableció el reinado del Olimpo. Gobernó el cielo, impartió justicia y mantuvo el equilibrio entre dioses y mortales, aunque sus romances trajeron incontables conflictos divinos."},
     {nombre: "Hera", region: ["gr"], historia: "Reina del Olimpo, protectora del matrimonio. Su unión con Zeus estuvo marcada por celos y venganzas contra los amantes y descendientes del dios, pero también defendió a las mujeres y castigó la infidelidad con una determinación temible."},
     {nombre: "Poseidon", region: ["gr"], historia: "Señor de los mares, creador de terremotos y caballos. Su disputa con Atenea por Atenas terminó con la ciudad eligiendo el olivo de la diosa en lugar de su fuente salada, lo que alimentó su carácter orgulloso y tempestuoso."},
     {nombre: "Hades", region: ["gr"], historia: "Gobernante del inframundo. Su rapto de Perséfone marcó el ciclo eterno de las estaciones. Aunque temido, era un dios justo que mantenía el orden entre los muertos y protegía los juramentos."},

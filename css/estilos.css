@@ -18,6 +18,7 @@ body
 {
     color: white !important;
     text-align: center;
+    font-family: "Syne Mono", monospace !important;;
 }
 
 #btnAleatorio 
@@ -30,7 +31,7 @@ body
   border-radius: 0.8em;
   cursor: pointer;
   border: none;
-  background: linear-gradient(to right, #e29d2d, #5500ff);
+  background: linear-gradient(to right, #006436, #2200ff);
   color: ghostwhite;
   overflow: hidden;
   margin: 20px auto;
@@ -115,7 +116,10 @@ body
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
-    box-shadow: 6px 20px 10px black;
+    box-shadow: 10px 10px 10px black;
+    font-family: "Instrument Serif", serif;
+    font-size: 20px;
+
 }
 
 #popup.mostrar
