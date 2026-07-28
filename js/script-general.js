@@ -3,6 +3,7 @@ let imagen = document.getElementById('imagenDios');
 let texto = document.getElementById('textoDios');
 
 let imagenes = {};
+let datosCargados = false;
 
 fetch("datos.json")
     .then(res => res.json())
@@ -18,17 +19,40 @@ fetch("datos.json")
 
 function diosRandom() 
 {
-    const index = Math.floor(Math.random() * dioses.length);
-    const dios = dioses[index];
-    const rutaImagen = imagenes[dios.nombre];
-
-    mostrarPopup(dios, rutaImagen);
-
     if(!datosCargados)
     {
         alert("Las imagenes aún se estan cargando");
         return;
     }
+
+    const index = Math.floor(Math.random() * dioses.length);
+    const dios = dioses[index];
+    const rutaImagen = imagenes[dios.nombre];
+
+    mostrarPopup(dios, rutaImagen);
+    iluminarRegion(dios.region);
+}
+
+
+function iluminarRegion(regiones) 
+{
+    const contenedorMapa = document.getElementById("contenedorMapa");
+    if (contenedorMapa) 
+    {
+        contenedorMapa.classList.remove("oculto");
+    }
+
+    document.querySelectorAll('#world-map .iluminado')
+        .forEach(el => el.classList.remove('iluminado'));
+
+    regiones.forEach(codigo => 
+    {
+        const region = document.getElementById(codigo);
+        if (region) 
+        {
+            region.classList.add('iluminado');
+        }
+    });
 }
 
 
@@ -47,15 +71,19 @@ function mostrarPopup(dios, rutaImagen)
 function ocultarPopup() 
 {
     const popup = document.getElementById("popup");
+    const contenedorMapa = document.getElementById("contenedorMapa");
 
     popup.classList.remove("mostrar");
 
     setTimeout(() => 
     {
         popup.classList.add("oculto");
+        contenedorMapa.classList.add("oculto");
+
+        document.querySelector('#world-map .iluminado')
+            .forEach(el => el.classList.remove('iluminado'));
     }, 400);
 }
-
 
 
 document.getElementById("cerrarPopup").addEventListener("click", ocultarPopup);

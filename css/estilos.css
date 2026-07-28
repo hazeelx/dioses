@@ -8,7 +8,7 @@ body
     text-align: center !important;
 }
 
-.titulo h1, h2
+.titulo h1, .titulo h2
 {
     color: black !important;
     text-align: center;
@@ -20,8 +20,6 @@ body
     text-align: center;
 }
 
-/*BOTON*/
-/* From Uiverse.io by adamgiebl */ 
 #btnAleatorio 
 {
   position: relative;
@@ -32,9 +30,11 @@ body
   border-radius: 0.8em;
   cursor: pointer;
   border: none;
-  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  background: linear-gradient(to right, #e29d2d, #5500ff);
   color: ghostwhite;
   overflow: hidden;
+  margin: 20px auto;
+  display: block;
 }
 
 #btnAleatorio svg 
@@ -85,11 +85,11 @@ body
   transform: scale(0.95);
 }
 
-
 /*POP UP*/
 #popup
 {
     position: fixed;
+    z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
@@ -111,7 +111,7 @@ body
 
 .popup-dioses
 {
-    background-color: rgba(0, 0, 0, 0.457);
+    background-color: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
@@ -127,6 +127,34 @@ body
 .oculto
 {
     display: none !important;      
+}
+
+#contenedorMapa
+{
+    width: 100%;
+    max-width: 500px;
+    margin: 1em auto 0;
+}
+
+#contenedorMapa svg
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#world-map path
+{
+    fill: #cccccc;
+    stroke: #ffffff;
+    stroke-width: 0.5;
+    transition: fill 0.4s ease;
+}
+
+#world-map .iluminado,
+#world-map .iluminado path
+{
+    fill: #8e2de2;
 }
 
 /*RESOLUCIONES*/
@@ -166,5 +194,4 @@ body
     {
         font-size: .9rem;
     }
-
 }
